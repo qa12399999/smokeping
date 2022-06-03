@@ -90,85 +90,201 @@ color = 0000ff
 
 *** Targets ***
 
-probe = TCPPing
+probe = FPing
 
 menu = Top
 title = Network Latency Grapher
-remark = Welcome to this SmokePing website. <br />
+remark = Welcome to the SmokePing website of WORKS Company. \
+         Here you will learn all about the latency of our network.
 
-+ mainland
-
-menu = 大陆方向
-title = 大陆方向
-nomasterpoll = yes
-host = /mainland/ct-gz~SLAVE_CODE /mainland/ct-sh~SLAVE_CODE /mainland/cu-gz~SLAVE_CODE /mainland/cu-sh~SLAVE_CODE /mainland/cm-gz~SLAVE_CODE /mainland/cm-sh~SLAVE_CODE
-
-++ ct-gz
-
-menu = 广州电信
-title = 广州电信
-slaves = SLAVE_CODE
-host = 14.215.116.1
-
-++ ct-sh
-
++ Other
+menu = 三大网络监控
+title = 监控统计
+ 
+++ CT
+ 
+menu = 电信网络监控
+title = 电信网络监控列表
+host = /Other/CT/CT-BJ /Other/CT/CT-TJ /Other/CT/CT-HLJ /Other/CT/CT-SH /Other/CT/CT-SC /Other/CT/CT-GZ
+ 
++++ CT-BJ
+ 
+menu = 北京电信
+title = 北京电信
+alerts = someloss
+host = 202.96.199.133
+ 
++++ CT-TJ
+ 
+menu = 天津电信
+title = 天津电信
+alerts = someloss
+host = 219.150.32.132
+ 
++++ CT-HLJ
+ 
+menu = 黑龙江电信
+title = 黑龙江电信
+alerts = someloss
+host = 219.147.198.242
+ 
++++ CT-SH
+ 
 menu = 上海电信
 title = 上海电信
-slaves = SLAVE_CODE
+alerts = someloss
 host = 180.153.28.5
-
-++ cu-gz
-
-menu = 广州联通
-title = 广州联通
-slaves = SLAVE_CODE
-host = 157.255.70.5
-
-++ cu-sh
-
+ 
++++ CT-SC
+ 
+menu = 四川电信
+title = 四川电信
+alerts = someloss
+host = 61.139.2.69
+ 
++++ CT-GZ
+ 
+menu = 深圳电信
+title = 深圳电信
+alerts = someloss
+host = 103.44.253.69
+ 
+ 
+++ CU
+ 
+menu = 联通网络监控
+title = 联通网络监控列表
+host = /Other/CU/CU-BJ /Other/CU/CU-TJ /Other/CU/CU-HLJ /Other/CU/CU-SH /Other/CU/CU-SC /Other/CU/CU-GZ
+ 
++++ CU-BJ
+ 
+menu = 北京联通
+title = 北京联通
+alerts = someloss
+host = 61.135.169.121
+ 
++++ CU-TJ
+ 
+menu = 天津联通
+title = 天津联通
+alerts = someloss
+host = 103.24.228.1
+ 
++++ CU-HLJ
+ 
+menu = 黑龙江联通
+title = 黑龙江联通
+alerts = someloss
+host = 202.97.224.69
+ 
++++ CU-SH
+ 
 menu = 上海联通
 title = 上海联通
-slaves = SLAVE_CODE
+alerts = someloss
 host = 211.95.52.116
-
-++ cm-gz
-
-menu = 广州移动
-title = 广州移动
-slaves = SLAVE_CODE
-host = 120.232.176.254
-
-++ cm-sh
-
+ 
+ 
++++ CU-SC
+ 
+menu = 四川联通
+title = 四川联通
+alerts = someloss
+host = 119.6.6.6
+ 
++++ CU-GZ
+ 
+menu = 广东联通
+title = 广东联通
+alerts = someloss
+host = 221.5.88.88
+ 
+ 
+ 
+++ CMCC
+ 
+menu = 移动网络监控
+title = 移动网络监控列表
+host = /Other/CMCC/CMCC-BJ /Other/CMCC/CMCC-TJ /Other/CMCC/CMCC-HLJ /Other/CMCC/CMCC-SH /Other/CMCC/CMCC-SC /Other/CMCC/CMCC-GZ
+ 
++++ CMCC-BJ
+ 
+menu = 北京移动
+title = 北京移动
+alerts = someloss
+host = 221.130.33.52
+ 
++++ CMCC-TJ
+ 
+menu = 天津移动
+title = 天津移动
+alerts = someloss
+host = 211.137.160.5
+ 
++++ CMCC-HLJ
+ 
+menu = 昆明移动
+title = 昆明移动
+alerts = someloss
+host = 39.130.140.2
+ 
++++ CMCC-SH
+ 
 menu = 上海移动
 title = 上海移动
-slaves = SLAVE_CODE
+alerts = someloss
 host = 221.183.55.22
+ 
++++ CMCC-SC
+ 
+menu = 四川移动
+title = 四川移动
+alerts = someloss
+host = 218.201.4.3
+ 
++++ CMCC-GZ
+ 
+menu = 广东移动
+title = 广东移动
+alerts = someloss
+host = 211.136.192.6
 
 + global
-
-menu = 国际方向
-title = 国际方向
-nomasterpoll = yes
-host = /global/cf~SLAVE_CODE /global/hk-pccw~SLAVE_CODE /global/sg-vu~SLAVE_CODE
+menu = 国际线路
+title = 监控统计
+host = /global/cf /global/yt /global/gg /global/sbd /global/cmi
 
 ++ cf
 
 menu = Cloudflare
 title = Cloudflare
-slaves = SLAVE_CODE
+alerts = someloss
 host = www.cloudflare.com
 
-++ hk-pccw
+++ yt
 
-menu = 香港 PCCW
-title = 香港 PCCW
-slaves = SLAVE_CODE
-host = 63.216.151.43
+menu = YouTube
+title = YouTube
+alerts = someloss
+host = www.youTube.com
 
-++ sg-vu
+++ gg
 
-menu = 新加坡 Vultr
-title = 新加坡 Vultr
-slaves = SLAVE_CODE
-host = 45.32.100.168
+menu = google
+title = google
+alerts = someloss
+host = www.google.com
+
+++ sbd
+
+menu = 美国斯巴达
+title = 美国斯巴达
+alerts = someloss
+host = 45.154.214.42
+
+++ cmi
+
+menu = 香港CMI
+title = 香港CMI
+alerts = someloss
+host = 117.18.13.248
